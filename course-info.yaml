@@ -1,0 +1,15 @@
+type: marketplace
+title: KotlinFlashKards - flows
+language: English
+summary: "This is a set of flash cards to practise Kotlin flow syntax. It can be used\
+  \ at regular intervals to strengthen long term memory recall of core syntax patterns\
+  \ used in concurrent code with flows in Kotlin. It covers Flow basics, error handling\
+  \ and testing flows. The testing section also has questions on Turbine testing library.\
+  \ It does not replace the documentation at kotlinlang.org or a good book but is\
+  \ a supplementary source of practice material to practise recall of the syntax and\
+  \ coding patterns."
+programming_language: Kotlin
+content:
+  - How to use this course
+  - Flows
+  - Conclusion

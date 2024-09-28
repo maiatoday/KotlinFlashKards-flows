@@ -1,0 +1,1 @@
+**I have a flow that does not run the code to emit any values until someone collects the flow. If another collector collects the flow the flow will emit all the values again. What kind of flow is this?**

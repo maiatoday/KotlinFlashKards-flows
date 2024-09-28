@@ -1,0 +1,1 @@
+**I have a flow that starts emitting values whether someone is collecting the flow or not. What kind of flow is this?**
