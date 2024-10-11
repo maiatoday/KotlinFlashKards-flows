@@ -1,0 +1,1 @@
+**Which flow does the intermediate operator return?**
