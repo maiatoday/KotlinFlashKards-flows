@@ -1,4 +1,4 @@
-***How do you cancel the flow and throw away any unconsumed events?***
+**How do you cancel the flow and throw away any unconsumed events?**
 
 <div class="hint">
   cancelAndIgnoreRemainingEvents
