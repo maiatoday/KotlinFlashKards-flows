@@ -1,5 +1,4 @@
 import app.cash.turbine.test
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import kotlin.test.assertEquals

@@ -13,7 +13,7 @@ fun countFlow(): Flow<Int> = flow {
     }
 }
 
-fun main() = runBlocking<Unit> {
+fun main() = runBlocking {
     // Launch a concurrent coroutine to check if the main thread is blocked
     launch {
         for (k in 1..3) {

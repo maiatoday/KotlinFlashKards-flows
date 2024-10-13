@@ -12,7 +12,7 @@ fun countFlow(): Flow<Int> = flow {
     }
 }
 
-fun main() = runBlocking<Unit> {
+fun main() = runBlocking {
     countFlow().collect { value ->
         if (oneTwo.containsKey(value))
             println("$value, ${oneTwo[value]}")
