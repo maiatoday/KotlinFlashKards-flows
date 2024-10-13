@@ -1,9 +1,15 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
 options:
-  - text: Correct
+  - text: cold
+    is_correct: false
+  - text: cold - channel
     is_correct: true
-  - text: Incorrect
+  - text: hot
+    is_correct: false
+  - text: hot - SharedFlow
+    is_correct: false
+  - text: hot - StateFlow
     is_correct: false
 files:
   - name: src/Main.kt

@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-  - text: Correct
-    is_correct: true
-  - text: Incorrect
+  - text: intermediate
     is_correct: false
+  - text: terminal
+    is_correct: true
 files:
   - name: src/Main.kt
     visible: true

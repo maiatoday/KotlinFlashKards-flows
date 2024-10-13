@@ -4,6 +4,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import net.maiatoday.rhymes.pudding
 import kotlin.time.Duration.Companion.milliseconds
 
 class PuddingProducer {
@@ -12,7 +13,7 @@ class PuddingProducer {
 
     fun producePudding(scope: CoroutineScope) {
         scope.launch {
-            peasePudding.forEach {
+            pudding.forEach {
                 delay(10.milliseconds)
                 println("Emitting $it")
                 _hotPudding.emit(it)
@@ -37,13 +38,3 @@ fun main(): Unit = runBlocking {
     collectingJob.cancel()
 }
 
-val peasePudding = listOf(
-    "PEASE-PUDDING hot,",
-    "Pease-pudding cold,",
-    "Pease-pudding in the pot,",
-    "Nine days old.",
-    "Some like it hot,",
-    "Some like it cold,",
-    "Some like it in the pot,",
-    "Nine days old."
-)

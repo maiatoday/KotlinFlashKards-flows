@@ -1,9 +1,9 @@
 type: choice
 is_multiple_choice: false
 options:
-  - text: Correct
+  - text: intermediate
     is_correct: true
-  - text: Incorrect
+  - text: terminal
     is_correct: false
 files:
   - name: src/Main.kt

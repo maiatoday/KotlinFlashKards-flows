@@ -1,10 +1,12 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
 options:
-  - text: Correct
-    is_correct: true
-  - text: Incorrect
+  - text: channel
     is_correct: false
+  - text: SharedFlow
+    is_correct: true
+  - text: StateFlow
+    is_correct: true
 files:
   - name: src/Main.kt
     visible: true
