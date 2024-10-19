@@ -1,9 +1,16 @@
-import org.junit.Assert
+import app.cash.turbine.test
+import junit.framework.TestCase.assertEquals
+import kotlinx.coroutines.test.runTest
+import net.maiatoday.rhymes.tenamalin
 import org.junit.Test
 
 class Test {
-    @Test fun testSolution() {
-        //TODO: implement your test here
-        Assert.assertTrue("Tests not implemented for the task", false)
+    @Test fun testSolution() = runTest {
+        tenamalinRhyme.test {
+            tenamalin.forEach {
+                assertEquals(it, awaitItem())
+            }
+            awaitComplete()
+        }
     }
 }
