@@ -22,7 +22,7 @@ val dishSpoon = listOf(
 
 val rain = listOf(
     "Rain, rain, go away.",
-    "Come again another day,",
+    "Come again another day.",
 )
 
 val basket = listOf(

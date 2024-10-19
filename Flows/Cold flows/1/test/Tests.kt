@@ -1,9 +1,14 @@
-import org.junit.Assert
+import app.cash.turbine.test
+import junit.framework.TestCase.assertEquals
+import kotlinx.coroutines.test.runTest
 import org.junit.Test
 
 class Test {
-    @Test fun testSolution() {
-        //TODO: implement your test here
-        Assert.assertTrue("Tests not implemented for the task", false)
+    @Test fun testSolution() = runTest {
+        rainFlow.test {
+            assertEquals("Rain, rain, go away.", awaitItem())
+            assertEquals("Come again another day.", awaitItem())
+            awaitComplete()
+        }
     }
 }

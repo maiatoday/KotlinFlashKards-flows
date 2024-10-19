@@ -7,7 +7,7 @@ class Test {
     @Test fun testSolution() = runTest {
         shortRhyme.test {
             assertEquals("Rain, rain, go away.", awaitItem())
-            assertEquals("Come again another day,", awaitItem())
+            assertEquals("Come again another day.", awaitItem())
             awaitComplete()
         }
     }
