@@ -11,6 +11,7 @@ import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 
 val coldFlow = flow {
+    println("start emitting")
     drink.forEach {
         emit(it)
         delay(500.milliseconds)

@@ -11,6 +11,7 @@ import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 
 val coldFlow = flow {
+    println("start emitting")
     drink.forEach {
         emit(it)
         delay(500.milliseconds)
@@ -28,6 +29,7 @@ fun getSharedFlowFromCold(scope: CoroutineScope, flow: Flow<String>) =
 fun main() = runBlocking {
 
     val sharedDrink = getSharedFlowFromCold(this, coldFlow)
+    println("The flow is converted it should have started emitting already")
 
     // Collect from the sharedFlow in two different collectors
     launch {
@@ -37,7 +39,8 @@ fun main() = runBlocking {
     }
 
     launch {
-        delay(1.seconds) // Start collecting after 1 second to ensure overlap
+        println("    Collector 2 starts in after a delay so it will miss the first value")
+        delay(1.seconds) // Start collecting after 1 second
         sharedDrink.collect { value ->
             println("    Collector 2: $value")
         }
