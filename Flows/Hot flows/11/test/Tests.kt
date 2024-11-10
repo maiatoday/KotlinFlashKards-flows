@@ -1,9 +1,22 @@
-import org.junit.Assert
+import app.cash.turbine.test
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.test.runTest
+import net.maiatoday.rhymes.play
 import org.junit.Test
+import kotlin.test.assertEquals
 
 class Test {
-    @Test fun testSolution() {
-        //TODO: implement your test here
-        Assert.assertTrue("Tests not implemented for the task", false)
+    @Test
+    fun testSolution() = runTest {
+        val sharedFlow = getSharedFlowFromCold(this, coldFlow)
+        sharedFlow.test {
+            
+            play.forEach {
+                val item = awaitItem()
+                assertEquals(it, item)
+            }
+            cancel()
+        }
     }
 }
