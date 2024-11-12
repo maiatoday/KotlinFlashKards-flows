@@ -1,5 +1,5 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
 options:
   - text: cold
     is_correct: false
